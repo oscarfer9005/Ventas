@@ -1,0 +1,10 @@
+C:\Users\ofernandez9\source\repos\Ventas\Model\bin\Debug\Model.dll
+C:\Users\ofernandez9\source\repos\Ventas\Model\bin\Debug\Model.pdb
+C:\Users\ofernandez9\source\repos\Ventas\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\ofernandez9\source\repos\Ventas\Model\obj\Debug\Model.dll
+C:\Users\ofernandez9\source\repos\Ventas\Model\obj\Debug\Model.pdb
+C:\Users\USER\Downloads\Ventas\Model\bin\Debug\Model.dll
+C:\Users\USER\Downloads\Ventas\Model\bin\Debug\Model.pdb
+C:\Users\USER\Downloads\Ventas\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\USER\Downloads\Ventas\Model\obj\Debug\Model.dll
+C:\Users\USER\Downloads\Ventas\Model\obj\Debug\Model.pdb

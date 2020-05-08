@@ -1,0 +1,81 @@
+﻿@section scripts {
+    @Scripts.Render("~/bundles/app")
+}
+<div class="page-header">
+    <h1>App Vendedor</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Vendedores</h2>
+            </div>
+            <div class="panel-body">
+                <ul class="list-unstyled" data-bind="foreach: books">
+                    <li>
+                        <strong><span data-bind="text: CODIGO"></span></strong>: <span data-bind="text: NOMBRE"></span>, <span data-bind="text: APELLIDO"></span>
+                        <!-- New code -->
+                        <small><a href="#" data-bind="click: $parent.getBookDetail">Detalle</a></small>
+                        <small><a href="#" data-bind="click: $parent.getDelete">Borrar</a></small>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="alert alert-danger" data-bind="visible: error"><p data-bind="text: error"></p></div>
+    </div>
+    <!-- ko if:detail() -->
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Detalle Vendedor</h2>
+            </div>
+            <table class="table">
+                <tr><td>CODIGO</td><td data-bind="text: detail().CODIGO"></td></tr>
+                <tr><td>NOMBRE</td><td data-bind="text: detail().NOMBRE"></td></tr>
+                <tr><td>APELLIDO</td><td data-bind="text: detail().APELLIDO"></td></tr>
+                <tr><td>NUMERO_IDENTIFICACION</td><td data-bind="text: detail().NUMERO_IDENTIFICACION"></td></tr>
+                <tr><td>CIUDAD</td><td data-bind="text: detail().DESCRIPCION"></td></tr>
+            </table>
+        </div>
+    </div>
+    <!-- /ko -->
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Agregar vendedor</h2>
+            </div>
+            <div class="panel-body">
+                <form class="form-horizontal" data-bind="submit: addBook">
+                    <div class="form-group">
+                        <label for="inputAuthor" class="col-sm-2 control-label">Ciudad</label>
+                        <div class="col-sm-10">
+                            <select data-bind="options:authors, optionsText: 'DESCRIPCION', value: newBook.Author"></select>
+                        </div>
+                    </div>
+                    <div class="form-group" data-bind="with: newBook">
+                        <label for="inputTitle" class="col-sm-2 control-label">Codigo</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="inputTitle" data-bind="value:Title" placeholder="Codigo" />
+                        </div>
+                        <label for="inputYear" class="col-sm-2 control-label">Nombre</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputYear" data-bind="value:Year" placeholder="Nombre" />
+                        </div>
+                        <label for="inputGenre" class="col-sm-2 control-label">Apellido</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputGenre" data-bind="value:Genre" placeholder="Apellido" />
+                        </div>
+                        <label for="inputPrice" class="col-sm-2 control-label">Numero Id.</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputPrice" data-bind="value:Price" placeholder="No. Identificacion" />
+                        </div>
+                    </div>
+                    <p>Si selecciona un codigo existente el vendedor se editara</p>
+                    <button type="submit" class="btn btn-default">Agregar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
